@@ -6,7 +6,7 @@ import { throwIfInvalidProps } from './propChecker'
 const DatePicker = Platform.select({
   android: () => require('./DatePickerAndroid').default,
   ios: () => require('./DatePickerIOS').default,
-  default: () => <Text>DatePicker is not supported on this platform.</Text>,
+  default: () => require('./DatePickerIOS').default,
 })()
 
 const DatePickerWrapper = (props) => {
